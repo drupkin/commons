@@ -25,6 +25,14 @@ dependencies {
 	testImplementation 'org.springframework.kafka:spring-kafka-test'
 }
 
+bootJar {
+	enabled = false
+}
+
+jar {
+	enabled = true
+}
+
 tasks.withType(KotlinCompile) {
 	kotlinOptions {
 		freeCompilerArgs = ['-Xjsr305=strict']
