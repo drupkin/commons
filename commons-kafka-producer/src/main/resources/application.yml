@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: kafka-producer
+
+#Kafka Producer
+kafka:
+  bootstrapAddress: 127.0.0.1:29092
+#  topic: UserCreatedMessage
+  serializer:
+    key: "org.apache.kafka.common.serialization.StringSerializer"
+    value: "io.confluent.kafka.serializers.KafkaAvroSerializer"
+  schema-registry:
+    url: http://127.0.0.1:28081

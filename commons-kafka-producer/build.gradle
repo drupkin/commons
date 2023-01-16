@@ -7,19 +7,20 @@ plugins {
 	id 'org.jetbrains.kotlin.plugin.spring' version '1.7.22'
 }
 
-group = 'bg.dr.chillywe'
-version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
-repositories {
-	mavenCentral()
-}
-
 dependencies {
+	// Spring
 	implementation 'org.springframework.boot:spring-boot-starter'
+	// Kotlin
 	implementation 'org.jetbrains.kotlin:kotlin-reflect'
 	implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+	// Kafka
 	implementation 'org.springframework.kafka:spring-kafka'
+	// Apache avro
+	implementation 'org.apache.avro:avro:1.11.1'
+	implementation 'io.confluent:kafka-avro-serializer:7.3.1'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.kafka:spring-kafka-test'
 }

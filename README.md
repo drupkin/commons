@@ -1,2 +1,2 @@
 # commons
-demo repository for shared configuratuin
+This is demo repo to share config etc...
